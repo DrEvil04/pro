@@ -44,7 +44,7 @@ public class ActeurDaoTest {
 
 	@Test
 	public void shouldListActeur() {
-		// WHEN
+		//when
 		List<Acteur> acteur = acteurDao.listActeur();
 		// THEN
 		assertThat(acteur).hasSize(5);
