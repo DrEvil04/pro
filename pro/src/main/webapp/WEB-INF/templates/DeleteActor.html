@@ -44,9 +44,23 @@ Supprimer un Acteur
 
 <div id="boutons">
 <input type="reset" value="Effacer" />
-<input id="bouton" type="submit" value="Envoyer" />
+<input id="bouton" type="submit" value="Envoyer" onClick="myFunction()"/>
 </div>
 </form>
+	<p id="demo"></p>
+
+
+<script>
+function myFunction() {
+    var x;
+    if (confirm("Press a button!") == true) {
+        x = "You pressed OK!";
+    } else {
+        x = "You pressed Cancel!";
+    }
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
 
 		<div align="center" class="container">
 		<div class="row">
