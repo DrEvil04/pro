@@ -61,6 +61,24 @@ function myFunction() {
     document.getElementById("demo").innerHTML = x;
 }
 </script>
+	<div id="demo">
+<h1>Informations sur la suppression (AJAX)</h1>
+<button type="button" onclick="loadDoc()">Infos</button>
+</div>
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "ajax_info.txt", true);
+  xhttp.send();
+}
+</script>
 
 		<div align="center" class="container">
 		<div class="row">
